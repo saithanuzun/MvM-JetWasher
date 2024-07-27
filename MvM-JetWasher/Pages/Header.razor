@@ -1,0 +1,139 @@
+@using System.Net.Http.Headers
+@using System.Text
+@using System.Text.Json
+@using System.Net
+@using System.Diagnostics
+<!-- Header Start -->
+<div class="header home">
+    <div class="container-fluid">
+        <div class="header-top row align-items-center">
+            <div class="col-lg-3">
+                <div class="brand">
+                    <a href="/" style="font-size: x-large ;font-weight: bold">
+                        <img src="img/logo2.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="topbar">
+                    <div class="topbar-col">
+                        <a href="tel:+447405392635"><i class="fa fa-phone-alt"></i>+44 7405 392635</a>
+                    </div>
+                    <div class="topbar-col">
+                        <div class="topbar-social">
+                            <a href="https://www.facebook.com/profile.php?id=100084962589023">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/leicestercarpetcleaner/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar navbar-expand-lg bg-light navbar-light">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto">
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" class="nav-item nav-link">About</a>
+                            <a onclick="document.getElementById('service').scrollIntoView({behavior:'smooth'})" class="nav-item nav-link">Service</a>
+                            <a onclick="document.getElementById('Faq').scrollIntoView({behavior:'smooth'})" class="nav-item nav-link">FAQ</a>
+                            <a href="tel:+447405392635" class="nav-item nav-link">Contact</a>
+                            <a href="tel:+447405392635" class="btn">Call US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero row align-items-center">
+            <div class="col-md-7">
+                <h2>Best & Trusted</h2>
+                <h2><span>Washing</span> Service</h2>
+                <p>Elevate Your Space, Sparkling Clean Every Time!</p>
+                <a class="btn" href="">Explore Now</a>
+            </div>
+            <div class="col-md-5">
+                <div class="form">
+                    <h3>Get A Quote</h3>
+                    <form>
+                        <input class="form-control" @bind="Name" type="text" placeholder="Your Name">
+                        <input class="form-control" @bind="MobileNumber" type="text" placeholder="Mobile Number">
+                        <div class="control-group">
+                            <select @bind="Service" class="custom-select">
+                                <option selected>Choose a service</option>
+                                <option value="Carpet">Carpet Cleaning</option>
+                                <option value="Sofa">Sofa Cleaning</option>
+                                <option value="Mattress">Mattress Cleaning</option>
+                                <option value="Upholstery">Upholstery Cleaning</option>
+                                <option value="Car">Car Seat Cleaning</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" @bind="Comment" placeholder="Comment"></textarea>
+                        <button  @onclick="SendMail" class="btn btn-block">Get A Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+@code
+{
+    private string Name;
+    private string MobileNumber;
+    private string Service;
+    private string Comment;
+    
+    public class ContactForm
+    {
+        public ContactForm(string name, string mobileNumber, string service, string comment)
+        {
+            Name = name;
+            MobileNumber = mobileNumber;
+            Service = service;
+            Comment = comment;
+        }
+
+        public string Name { get; set; }
+    
+        public string MobileNumber { get; set; }
+    
+        public string Service { get; set; }
+    
+        public string Comment { get; set; }
+    }
+    
+    private async Task SendMail()
+    {
+        string url = "https://carpet-cleaning-backend.azurewebsites.net/";
+        
+        using HttpClient client = new HttpClient();
+
+        client.BaseAddress = new Uri(url);
+
+        ContactForm form = new ContactForm(Name, MobileNumber, Service, Comment);
+
+        var json = JsonSerializer.Serialize(form);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        var response = await client.PostAsync("home", content);
+
+
+        if (response.IsSuccessStatusCode)
+        {
+            var responseContent = response.Content.ReadAsStringAsync().Result;
+            Debug.WriteLine("oldu");
+        }
+        else
+        {
+            Debug.WriteLine("error");
+        }
+    }
+}

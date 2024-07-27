@@ -26,16 +26,44 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/CallAction.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FsbEFjdGlvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2VhdGhlci5yYXpvcg==
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Faq.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmFxLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Features.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9vdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Newsletter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTmV3c2xldHRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Services.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VydmljZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/Pages/Testimonial.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVzdGltb25pYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/saithanuzun/Desktop/git-Repositories/MvM-JetWasher/MvM-JetWasher/_Imports.razor]

@@ -3,6 +3,10 @@
 @using System.Text.Json
 @using System.Net
 @using System.Diagnostics
+
+@inject ApiService _service
+
+
 <!-- Header Start -->
 <div class="header home">
     <div class="container-fluid">
@@ -64,10 +68,10 @@
                         <div class="control-group">
                             <select @bind="Service" class="custom-select">
                                 <option selected>Choose a service</option>
-                                <option value="Carpet">Driveway Cleaning</option>
-                                <option value="Sofa">Block Paving Cleaning</option>
-                                <option value="Upholstery">Patio Cleaning</option>
-                                <option value="Car">Exterior Cleaning</option>
+                                <option value="driveway">Driveway Cleaning</option>
+                                <option value="blockPaving">Block Paving Cleaning</option>
+                                <option value="patio">Patio Cleaning</option>
+                                <option value="exterior">Exterior Cleaning</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -87,50 +91,11 @@
     private string MobileNumber;
     private string Service;
     private string Comment;
-    
-    public class ContactForm
-    {
-        public ContactForm(string name, string mobileNumber, string service, string comment)
-        {
-            Name = name;
-            MobileNumber = mobileNumber;
-            Service = service;
-            Comment = comment;
-        }
 
-        public string Name { get; set; }
-    
-        public string MobileNumber { get; set; }
-    
-        public string Service { get; set; }
-    
-        public string Comment { get; set; }
+
+    protected async void SendMail()
+    {
+        await _service.SendMail(new global::ContactForm(Name,MobileNumber,Service,Comment));
     }
     
-    private async Task SendMail()
-    {
-        string url = "https://carpet-cleaning-backend.azurewebsites.net/";
-        
-        using HttpClient client = new HttpClient();
-
-        client.BaseAddress = new Uri(url);
-
-        ContactForm form = new ContactForm(Name, MobileNumber, Service, Comment);
-
-        var json = JsonSerializer.Serialize(form);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-        var response = await client.PostAsync("home", content);
-
-
-        if (response.IsSuccessStatusCode)
-        {
-            var responseContent = response.Content.ReadAsStringAsync().Result;
-            Debug.WriteLine("oldu");
-        }
-        else
-        {
-            Debug.WriteLine("error");
-        }
-    }
 }

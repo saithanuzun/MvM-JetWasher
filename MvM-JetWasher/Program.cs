@@ -7,7 +7,13 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://carpet-cleaning-backend.azurewebsites.net/") });
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri("https://www.mvmcleaning.com/")
+});
+
+
+
 builder.Services.AddScoped<ApiService>();
 
 

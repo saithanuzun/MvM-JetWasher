@@ -14,6 +14,47 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap\bootstrap.min.css" />
       <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap\bootstrap.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\41.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\42.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\43.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img10.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img11.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img12.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img13.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img14.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img15.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img16.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img17.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img18.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img19.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img20.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img21.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img22.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img23.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img24.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img25.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img26.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img27.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img28.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img29.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img30.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img31.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img32.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img33.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img36.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img37.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img38.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img39.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img40.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\works\img9.jpg" />
     </ItemGroup>
 
 </Project>

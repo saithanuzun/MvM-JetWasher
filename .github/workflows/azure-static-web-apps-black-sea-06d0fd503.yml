@@ -24,27 +24,27 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
+      # ✅ Remove unnecessary npm install step — not needed
 
-      - name: Get Id Token
+      - name: Get ID Token
         uses: actions/github-script@v6
         id: idtoken
         with:
           script: |
-            const core = require('@actions/core')
-            return await core.getIDToken()
+            const core = require('@actions/core');
+            const idToken = await core.getIDToken();
+            return idToken;
           result-encoding: string
 
-      - name: Build And Deploy
+      - name: Build and Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_SEA_06D0FD503 }}
           action: "upload"
-          app_location: "/" # Path to your Blazor app's project file (relative to repo root)
-          api_location: ""  # Leave empty unless you have an Azure Functions API
-          output_location: "build/wwwroot" # Location of published static files for Blazor WASM
+          app_location: "/" # Root of Blazor project
+          api_location: ""  # Leave empty unless using Azure Functions
+          output_location: "build/wwwroot" # Output of `dotnet publish`
           app_build_command: "dotnet publish -c Release -o build"
           github_id_token: ${{ steps.idtoken.outputs.result }}
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvM-JetWasher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f865844d65ef5d95f7db42459549872b8ae66724")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cb1f14a3de84887bbb2469a94ef5dcc1aec2334")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvM-JetWasher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvM-JetWasher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
